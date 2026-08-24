@@ -1,7 +1,24 @@
-sing System;
+using System;
 
 namespace P00_Unidad1
 {
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Automovil miAuto = new Automovil();
+
+            miAuto.Marca = "Ford";
+            miAuto.Modelo = "Mustang";
+            miAuto.Anio = 2025;
+            miAuto.VelocidadActual = 50;
+
+            miAuto.Frenar(12);
+
+            miAuto.MostrarInformacion();
+        }
+    }
+}
     public class Automovil
     {
         // Atributos
@@ -26,25 +43,9 @@ namespace P00_Unidad1
 
         public void MostrarInformacion()
         {
-            Console.WriteLine("Marca: " + Marca);
-            Console.WriteLine("Modelo: " + Modelo);
-            Console.WriteLine("Anio: " + Anio);
-            Console.WriteLine("Velocidad actual: " + VelocidadActual + " km/h");
+            Console.WriteLine("La Marca del auto es: " + Marca);
+            Console.WriteLine("El Modelo es: " + Modelo);
+            Console.WriteLine("El Anio es: " + Anio);
+            Console.WriteLine("La Velocidad actual: " + VelocidadActual + " km/h");
         }
     }
-
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            Automovil miAuto = new Automovil();
-
-            miAuto.Marca = "Ford";
-            miAuto.Modelo = "XL";
-            miAuto.Anio = 2025;
-            miAuto.VelocidadActual = 0;
-
-            miAuto.MostrarInformacion();
-        }
-    }
-}
